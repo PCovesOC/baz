@@ -1,0 +1,13 @@
+name: Call Local Action
+
+on:
+  push:
+
+jobs:
+  call-local-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./foo
+        with:
+          world: "Autruche"

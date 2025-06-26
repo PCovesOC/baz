@@ -1,0 +1,15 @@
+name: Foo Action
+
+description: A simple action with a 'world' input
+
+inputs:
+  world:
+    description: The world to greet
+    default: Kiwi
+
+runs:
+  using: composite
+  steps:
+    - uses: ./bar
+      with:
+        world: ${{ inputs.world }}
